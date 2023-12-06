@@ -1,0 +1,331 @@
+@import "https://fonts.googleapis.com/css?family=Poppins";
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s;
+  color: #2c405e;
+}
+
+body.light {
+  background-color: #ffff;
+  color: #2c405e;
+}
+
+body.dark {
+  background-color: #222222;
+  color: #f5f5f5;
+}
+
+.projects .project-section .content .footer h1 {
+  color: inherit;
+  font-size: 25px;
+}
+
+nav {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
+}
+
+nav p {
+  /* color: #0594ec; */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  /* color: #2c405e; */
+  color: inherit;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  background-color: #2c405e;
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  height: 2px;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.2s ease;
+}
+
+nav ul li a:hover::after {
+  transform: translateY(-15px);
+  opacity: 1;
+}
+
+.toggle-bar {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.toggle-bar > button {
+  margin: 5px;
+}
+
+.profile {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile > img {
+  width: 15%;
+  height: 10%;
+  border-radius: 90%;
+  border: 10px;
+  
+}
+.profile .bio-text {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: smaller;
+  
+}
+.profile .bio-text .social-media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: smaller;
+}
+.social-media a{
+  padding: 10px;
+}
+
+.featured {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile .bio-text > h2,
+.tech-stack > h2,
+.social-media> h2,
+.projects > h2,
+.communities > h2,
+.experience > h2,
+.education > h2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.profile .bio-text > span,
+.social-media > span,
+.tech-stack > span,
+.projects > span,
+.communities > span,
+.experience > span,
+.education > span {
+  padding: 0;
+  margin: 0;
+  width: 70px;
+  border-bottom: 4px solid;
+  z-index: 1;
+  margin-bottom: 1.2em;
+  border-radius: 5px;
+}
+.social-media,
+.projects,
+.tech-stack,
+.communities,
+.experience,
+.education {
+  padding: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.communities .communities-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.communities .communities-details .details {
+  width: 490px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.communities .communities-details .details .logos {
+    width: 40%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.communities .communities-details .details .role {
+  margin-top: 3px;
+  font-weight: bolder;
+  font-size: 1.1em;
+}
+.communities .communities-details .details .socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.communities .communities-details .details .socials a{
+  padding: 10px;
+}
+
+.education .edu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.education .edu .course {
+  font-weight: bold;
+}
+.education .edu .date {
+  font-style: italic;
+}
+.education .edu .course i,
+.education .edu .school i,
+.education .edu .date i {
+  margin-right: 5px;
+}
+
+.experience .exp {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.experience .exp .role {
+  font-weight: bold;
+}
+.experience .exp .date {
+  font-style: italic;
+}
+.experience .exp .role i,
+.experience .exp .company i,
+.experience .exp .date i {
+  margin-right: 5px;
+}
+
+.projects {
+  padding: 20px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.projects .project-section {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: space-between;
+}
+.projects .project-section .content {
+  width: 400px;
+  margin: 10px;
+}
+.projects .background {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer;
+}
+
+.projects .project-section .content .fourth {
+  height: 70px;
+  width: 100%;
+  padding: 10px;
+  background: url("C:\Users\USER\Desktop\MY PORTFOLIO\images\logscrn.png");
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+
+.projects .project-section .content .sixth {
+  height: 70px;
+  width: 100%;
+  padding: 10px;
+  background: url("C:\Users\USER\Desktop\MY PORTFOLIO\images\calcscrn.png");
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  margin-left: 10cm;
+}
+
+.projects .project-section .content .footer {
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: column;
+  /* background: #fff; */
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 5px 5px;
+}
+.projects .project-section .content .footer > h3 {
+  margin: 0;
+}
+
+.projects .project-section .content .footer > p {
+  font-size: 12px;
+}
+
+.projects .project-section .content .footer > a {
+  align-self: flex-end;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  width: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #2c405e;
+  text-decoration: none;
+}
+
+
